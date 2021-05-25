@@ -1,0 +1,12 @@
+
+% rebase('layout.html', title='Edit a word')
+
+<form action="/{{ word }}" method="POST">
+    <div class="field">
+        <label class="label" for="word">Change '{{ word }}' into:</label>
+        <div class="control">
+            <input type="text" name="word" value="{{ word }}" autofocus>
+        </div>
+    </div>
+    <button class="button is-link" type="submit">Save Changes</button>
+</form>

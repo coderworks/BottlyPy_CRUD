@@ -1,0 +1,18 @@
+
+% rebase('layout.html', title='This is a title...')
+
+<table class="table is-hoverable is-striped">
+
+    %for word in words:
+        <tr>
+            <td class="is-vcentered"><strong>{{ word }}</strong></td>
+            <td><a class="button is-success" href="/{{ word }}">Edit</a></td>
+            <td>
+                <form action="/delete/{{ word }}" method="POST">
+                    <input class="button is-danger" type="submit" value="Delete"/>
+                </form>
+            </td>
+        </tr>
+    %end
+
+</table>
